@@ -1,16 +1,16 @@
 {
   "name": "learning-clean-node",
   "version": "1.0.0",
-  "description": "",
+  "description": "Construindo uma API Rest em NodeJS utilizando TDD, Clean Architecture e Design Patterns.",
+  "author": "Filipe Parisoto Ribeiro",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
-    "test:staged": "jest --passWithNoTests"
+    "test": "jest --watchAll --silent --noStackTrace",
+    "test:staged": "jest --passWithNoTests --findRelatedTests --silent"
   },
   "standard": {
     "env": ["jest"]
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "husky": "^4.3.8",
