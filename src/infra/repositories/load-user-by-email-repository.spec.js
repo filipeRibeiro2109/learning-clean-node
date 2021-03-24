@@ -48,4 +48,10 @@ describe('LoadUserByEmail Repository', () => {
       password: fakeUser.ops[0].password
     })// fakeUser.ops[0] its the object of inserted user on object returned by insertOne of Mongodb
   })
+
+  test('Should throw if no userModel is provided', () => {
+    const sut = new LoadUserByEmailRepository()
+    const promise = sut.load('any_email@mail.com')
+    expect(promise).rejects.toThrow()
+  })
 })
