@@ -53,7 +53,7 @@ describe('LoadUserByEmail Repository', () => {
   test('Should throw if no userModel is provided', () => {
     const sut = new LoadUserByEmailRepository()
     const promise = sut.load('any_email@mail.com')
-    expect(promise).rejects.toThrow()
+    expect(promise).rejects.toThrow(new MissingParamError('userModel'))
   })
 
   test('Should throw if no email is provided', () => {
